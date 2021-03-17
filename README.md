@@ -6,12 +6,12 @@
 
 ### < 기본 커리큘럼 >
 
-- 웹기초
-- HTML & CSS
-- Python 기초
-- Django
-- Git & 배포
-- 상황에 따라 추가하는 것을 계획중 (JS, Ajax, React etc..)
+> - 웹기초
+> - HTML & CSS
+> - Python 기초
+> - Django
+> - Git & 배포
+> - 상황에 따라 추가하는 것을 계획중 (JS, Ajax, React etc..)
 
 ### < 주요 세션 일정 >
 
