@@ -7,7 +7,7 @@
 다양한 Property가 존재하며,
 각 Property마다 사용할 수 있는 값이 정해져있다.
 
-ex. Position Property의 종류
+ex. Position Property 값의 종류
 
 - static
 - absolute
@@ -15,8 +15,7 @@ ex. Position Property의 종류
 - fixed
 
 보통은 글자 사이즈나 크기 또는 넓이를 조정할 때 숫자값으로 조정한다.
-그 숫자값을 이용하여 수치를 조정한다.
-이 숫자값을 이용할 떈 단위가 중요하다.
+이 숫자값을 이용할 땐 단위가 중요하다.
 
 숫자값의 대표적인 종류
 
