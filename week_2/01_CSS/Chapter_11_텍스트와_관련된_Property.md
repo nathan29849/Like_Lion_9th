@@ -8,7 +8,7 @@
 - font-family : 우리가 원하는 폰트의 종류를 정할 수 있음
   - ex. font-family: 'Cute Font', Arial, cursive; (한 단어 이내의 폰트명은 따옴표를 적지 않아도 됨.)
   - 폰트를 지정할 땐, 보통 여러 개를 동시에 지정함.
-    - 모든 이용자의 기기에 동일한 폰트가 없을 수 잇기 때문임.
+    - 모든 이용자의 기기에 동일한 폰트가 없을 수 있기 때문임.
     - 앞에서부터 차례로 적용된다. (첫 번째 폰트가 없으면, 두 번째 폰트가 적용되는 방식)
     - OS와 기본 브라우저에 설치된 일반 글꼴을 맨 마지막에 두어, 문제 없이 실행하게 한다.
       - serif, sans-serif, cursive, fantasy, monospace 등이 대표적 일반 폰트이다.
@@ -42,7 +42,8 @@
     - ex_2. h1{line-height: 2;} -> 32px : 해당 요소의 폰트 사이즈를 기준으로 n배 해준다.
 
 실제 CSS에서 line-height가 작동하는 원리
-<img src="https://images.velog.io/images/nathan29849/post/87f4cb6c-3452-45fd-8389-c96d5c0f2005/image.png" width="50%">
+
+- <img src="https://images.velog.io/images/nathan29849/post/87f4cb6c-3452-45fd-8389-c96d5c0f2005/image.png" width="30%">
 
 - latter-spacing : 글자와 글자 사이의 간격을 조정함 (자간 조절)
   - ex. h1{latter-spacing: 2px;}
