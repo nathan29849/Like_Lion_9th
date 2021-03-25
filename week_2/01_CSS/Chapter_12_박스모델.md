@@ -9,10 +9,12 @@ HTML은 태그와 컨텐츠로 이루어져 있음
 브라우저에는 태그 없이 컨텐츠만 출력이 된다.
 
 브라우저에서 출력되는 이 컨텐츠가 사각형의 박스 형태로 출력이 된다.
+<br/>
 <img src="https://images.velog.io/images/nathan29849/post/d7524a77-c269-4b5e-a66d-a098de6ef913/image.png" width="40%">
 
 브라우저 상의 컨텐츠들을 올바르게 배치하기 위해서는
 박스 형태에 대한 이해가 반드시 필요하다.
+<br/>
 <img src="https://images.velog.io/images/nathan29849/post/4821fb4b-271f-40de-8e0c-c02427315f2c/image.png" width="30%">
 
 이 박스 형태는 컨텐츠에서 끝나는게 아님.
@@ -24,6 +26,7 @@ HTML은 태그와 컨텐츠로 이루어져 있음
 - border : content를 감싸는 테두리 경계선
 - padding : content와 border 사이의 여백
 - margin : border 밖의 여백
+  <br/>
   <img src="https://images.velog.io/images/nathan29849/post/322df016-73be-4af9-a1fb-1e60df4f0b33/image.png" width="30%">
 
 ### 2강. Content와 Border
@@ -33,6 +36,7 @@ HTML은 태그와 컨텐츠로 이루어져 있음
 보통 요소의 크기를 정의할 때 height, width를 쓰는데, 이는 content의 크기를 의미한다.
 
 content의 크기를 지정해 놓고, content 내부의 양을 늘리게 되면, 내용이 content를 벗어나게 된다.
+<br/>
 <img src="https://images.velog.io/images/nathan29849/post/177b08a9-a71d-4420-b81c-7f39f3c6df90/image.png" width="30%">
 
 (참고) :
@@ -63,6 +67,7 @@ ex. border: 4px solid red;
     - border-bottom-left-radius
     - border-bottom-right-radus
   - 타원형도 적용할 수 있음.
+    <br/>
     - <img src="https://images.velog.io/images/nathan29849/post/18a794e5-babe-4a13-8d4a-0c1501a9803f/image.png" width="30%">
   - 한 번에 적용하고 싶을 때는 / 를 이용하여 구분지어주면 된다.
     - ex. border-radius: 100px 50px 0 0 / 0 0 50px 100px; (첫번째 자리는 왼쪽 상단을 의미하며 / 를 통해 타원형의 반지름을 구분한다.)
@@ -78,6 +83,7 @@ padding: 24px 12px 33px 12px; 처럼 네 방향을 따로 정할수도 있음.
 위 아래의 다른 요소에서 각각 margin을 적용하게 되면, 두 margin이 함께 공존하지 않게 되는 현상
 
 둘 중 더 큰 쪽 margin을 따라가게 된다.
+<br/>
 <img src="https://images.velog.io/images/nathan29849/post/683cfcfa-ffd0-4c3e-96cf-694b7cb85fa0/image.png" width="30%">
 
 ##### Box Sizing
