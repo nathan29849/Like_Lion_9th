@@ -39,7 +39,7 @@ flex box를 사용하고자 한다면, 정렬하려고 하는 부모 요소에 `
   - 만약 속성을 주지 않으면 `flex-wrap: norwrap`으로 적용이 된다.
   - `flex-flow: row wrap;`을 통해 `flex-direction`과 `flex-wrap`을 동시에 사용할 수 있다.(순서대로 써주면 됨)
 - justify-content
-  - flex-direction으로 정해진 방향을 기준으로 하여 **수평**으로 item을 정렬하는 방법을 정함 (flex-diraction과 동일한 방향이라고 생각하면 됨)
+  - flex-direction으로 정해진 방향을 기준으로 하여 **수평**으로 item을 정렬하는 방법을 정함 (flex-direction과 동일한 방향이라고 생각하면 됨)
     <br/>
     <img src="https://images.velog.io/images/nathan29849/post/c2935b1d-cbff-47c1-99f2-467d24974497/image.png" width="40%">
     <img src="https://images.velog.io/images/nathan29849/post/2a30e602-8f7a-40a6-ac75-25bfd08ecb00/image.png" width="40%">
