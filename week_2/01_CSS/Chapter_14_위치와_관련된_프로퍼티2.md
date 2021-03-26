@@ -15,8 +15,6 @@
 flex box는 부모 요소인 flex container와 자식 요소인 flex item으로 구성되어 있다.
 
 flex box를 사용하고자 한다면, 정렬하려고 하는 부모 요소에 `display: flex;`를 추가하여 준다.
-<br/>
-<img src="images.velog.io/images/nathan29849/post/753c6d0b-5b96-4ed4-bbb2-a68f9118e09d/image.png" width="50%">
 
 #### ❗️❗️flex box의 핵심❗️❗️
 
@@ -111,4 +109,4 @@ flex box를 사용하고자 한다면, 정렬하려고 하는 부모 요소에 `
 
 ### 2강. flexbox를 활용한 간단한 레이아웃
 
-    <img src="" width="40%">
+실습!
