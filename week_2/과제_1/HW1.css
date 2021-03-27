@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+}
+
+#main {
+  display: flex;
+  flex-grow: 1;
+}
+#sec_1 {
+  background-color: #1da1f2;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(twitter-assets/twitter.svg);
+  background-repeat: no-repeat;
+  background-size: 95em;
+  background-position: left;
+  background-blend-mode: none;
+}
+
+#sec_1 span {
+  color: white;
+  font-weight: 500;
+  padding: 30px;
+  font-size: 1.5em;
+}
+#sec_1 div {
+  width: 80%;
+  padding: 20px;
+}
+
+#sec_2 {
+  flex: 50%;
+}
+#sec_2 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#sec_2 nav span {
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+#img-contain {
+  position: relative;
+  top: 150px;
+  left: 275px;
+}
+.twitter {
+  width: 50px;
+  height: 50px;
+}
+.input_form {
+  width: 230px;
+  height: 50px;
+  color: #bfc9d1;
+  border: 1px solid #bfc9d1;
+  border-radius: 3px;
+  padding: 12px;
+  font-size: 17px;
+}
+
+.pw_search {
+  color: #bfc9d1;
+  margin-top: 10px;
+  padding-top: 5px;
+  font-size: medium;
+}
+
+#foot {
+  flex-shrink: 1;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: small;
+  border: 1px solid #e6ecf0;
+}
+#foot a {
+  margin-right: 20px;
+  color: #bfc9d1;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.article #title {
+  font-weight: bold;
+  font-size: 31px;
+  width: 37%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+.article #sign_up {
+  width: 37%;
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #14171a;
+  font-weight: bold;
+}
+
+#article_btn1 {
+  color: white;
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+  border-radius: 20px;
+  padding: 0.4em 10em 0.4em 10em;
+}
+
+#article_btn2 {
+  color: #1da1f2;
+  background-color: white;
+  border-radius: 20px;
+  border-color: #1da1f2;
+  margin-top: 1em;
+  padding: 0.4em 10.5em 0.4em 10.5em;
+  margin-bottom: 350px;
+}
+
+#login_btn {
+  color: #1da1f2;
+  background-color: white;
+  border-radius: 20px;
+  border-color: #1da1f2;
+  margin-top: 2px;
+  padding: 0.8em 0.6em 0.8em 0.6em;
+}
