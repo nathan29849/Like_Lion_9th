@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  width: 100%;
+}
+body {
+  margin: 0;
+}
+
+/* .header {
+  position: fixed;
+} */
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 49.5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #eff2f1;
+  border-bottom: 3px solid #a0138e;
+}
+
+.nav_bar {
+  flex-basis: 133px;
+  padding-top: 47px;
+}
+
+.section {
+  flex-basis: 600px;
+  background-image: url(section_img.webp);
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.content {
+  flex-basis: 351px;
+  background-color: #fcd307;
+}
+
+.about {
+  flex-basis: 710px;
+}
+
+.contact {
+  flex-basis: 850px;
+  background-color: #212121;
+  color: white;
+}
+
+.foot {
+  flex-basis: 150px;
+}
+
+<img src="https://static.wixstatic.com/media/a38016_9bd9d7a9ccb44689ba0771fd8e44d08e.jpg/v1/fill/w_1960,h_1200,al_c,q_90,usm_0.66_1.00_0.01/a38016_9bd9d7a9ccb44689ba0771fd8e44d08e.webp" alt="" style="width: 980px; height: 600px; object-fit: cover; object-position: 50% 50%;">
