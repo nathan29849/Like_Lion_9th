@@ -19,7 +19,7 @@
 
 ##### 2주차 : [CSS (+ Bootstrap & 과제 1)](week_2)
 
-##### 3주차 :
+##### 3주차 : [TeamProject 1 (web front clone)](week_3)
 
 ##### 4주차 :
 
