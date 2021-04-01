@@ -6,13 +6,10 @@ body {
   margin: 0;
 }
 
-/* .header {
-  position: fixed;
-} */
-
 .main {
   display: flex;
   flex-direction: column;
+  width: 1550px;
 }
 
 .header {
@@ -45,6 +42,8 @@ body {
 
 .about {
   flex-basis: 710px;
+  display: flex;
+  align-items: center;
 }
 
 .contact {
@@ -57,4 +56,72 @@ body {
   flex-basis: 150px;
 }
 
-<img src="https://static.wixstatic.com/media/a38016_9bd9d7a9ccb44689ba0771fd8e44d08e.jpg/v1/fill/w_1960,h_1200,al_c,q_90,usm_0.66_1.00_0.01/a38016_9bd9d7a9ccb44689ba0771fd8e44d08e.webp" alt="" style="width: 980px; height: 600px; object-fit: cover; object-position: 50% 50%;">
+.content-main {
+  width: 1000px;
+  margin: 0 auto; /*auto값은 요소 안의 마진 여백이 왼쪽 마진과 오른쪽 마진 사이에서 대등하게 나눠짐을 의미한다.*/
+  display: flex;
+  align-items: center;
+}
+
+.content-block {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.content-round {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 240px;
+}
+
+#round {
+  width: 102px;
+  height: 102px;
+  background: white;
+  border-radius: 50%;
+}
+
+#round img {
+  width: 60px;
+  margin: 17px;
+}
+
+.content-p {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 14px;
+  letter-spacing: 2.1px;
+  font-family: helvetica, sans-serif;
+}
+
+.contact-main {
+  width: 1000px;
+  display: flex;
+  /* align-items: center; */
+  margin: 35px auto;
+}
+
+.contact-left-side {
+  flex-basis: 45%;
+  background-color: #fcd307;
+
+  height: 1000px;
+}
+
+.contact-right-side {
+  flex-basis: 55%;
+  background-color: #a0138e;
+  height: 1000px;
+}
+
+.contact-title {
+  font-size: 55px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.contact-subtitle {
+  font-size: 20px;
+  font-family: serif;
+}
+
+/*auto값은 요소 안의 마진 여백이 왼쪽 마진과 오른쪽 마진 사이에서 대등하게 나눠짐을 의미한다.*/
