@@ -56,6 +56,8 @@ body {
   flex-basis: 150px;
 }
 
+/* ---------------------CONTENT--------------------------*/
+
 .content-main {
   width: 1000px;
   margin: 0 auto; /*auto값은 요소 안의 마진 여백이 왼쪽 마진과 오른쪽 마진 사이에서 대등하게 나눠짐을 의미한다.*/
@@ -103,16 +105,18 @@ body {
 }
 
 .contact-left-side {
-  flex-basis: 45%;
+  flex-basis: 40%;
   /* background-color: #fcd307; */
 
   height: 1000px;
 }
 
 .contact-right-side {
-  flex-basis: 55%;
-  background-color: #a0138e;
+  flex-basis: 60%;
+  /* background-color: #a0138e; */
   height: 1000px;
+  padding-right: 16%;
+  padding-top: 140px;
 }
 
 .contact-title {
@@ -148,6 +152,8 @@ body {
   margin-left: 8px;
   margin-right: 17px;
 }
+
+/* ---------------------CONTACT--------------------------*/
 
 .contact-img-info {
   display: flex;
@@ -187,4 +193,73 @@ body {
   position: absolute;
   top: 15px;
   width: 40px;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.left-form {
+  width: 221px;
+  height: 32px;
+  margin-bottom: 3px;
+  padding-left: 20px;
+}
+
+#message {
+  width: 210px;
+  height: 102px;
+  padding: 10px 10px 13px 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow: scroll;
+  font-size: 14px;
+}
+
+.contact-left-form {
+  width: 222px;
+  margin-right: 10px;
+}
+
+.contact-form-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#submit-btn {
+  background-color: #fcd307;
+  color: #212121;
+  border: none;
+  width: 104px;
+  height: 30px;
+  margin-right: 2px;
+}
+
+#submit-btn:hover {
+  background-color: white;
+  transition: background-color 0.5s;
+}
+
+.contact-right-side h5 {
+  font-size: 29px;
+  font-family: serif;
+  margin-bottom: 5%;
+}
+
+hr {
+  border: solid 1px white;
+}
+
+.left-form:hover,
+#message:hover {
+  border: solid 2px #fcd307;
+}
+
+.left-form:focus,
+#message:focus {
+  border: solid 2.2px #fcd307;
+  outline: none;
+}
+
+#email:focus {
+  border: solid 2.2px red;
 }
