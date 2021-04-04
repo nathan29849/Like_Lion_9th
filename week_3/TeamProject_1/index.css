@@ -25,6 +25,22 @@ body {
 .nav_bar {
   flex-basis: 133px;
   padding-top: 47px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_bar span {
+  width: 200px;
+  margin: 0;
+}
+
+.nav_bar a {
+  padding: 8px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+.nav_bar a:hover {
+  color: yellow;
 }
 
 .section {
@@ -152,6 +168,97 @@ body {
   margin-left: 8px;
   margin-right: 17px;
 }
+/* --------------------ABOUT-------------------------*/
+.about_final {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 50px;
+}
+
+#about-cross {
+  position: relative;
+  top: 12px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 6000px;
+}
+.about_1 {
+  padding-left: 50px;
+  padding-top: 60px;
+}
+.about_1_1 {
+  display: flex;
+  flex-direction: row;
+}
+.introduce {
+  font-size: 55px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.introduce_1 {
+  font-size: 55px;
+}
+.about_2 {
+  display: flex;
+}
+.about_2_1 {
+  padding-right: 50px;
+}
+.about_2_1_1 {
+  display: flex;
+  justify-content: space-between;
+}
+.about_2_2_1 {
+  display: flex;
+  justify-content: space-between;
+}
+.about_name_1 {
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+.people {
+  width: 215px;
+  height: 201px;
+}
+.about_2_1_2 {
+  display: flex;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.about_2_2_2 {
+  display: flex;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.about_content {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.CEO {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.contact-cross_1 {
+  float: left;
+  left: -30px;
+  background: #000000;
+  height: 40px;
+  position: relative;
+  width: 10px;
+  top: 30px;
+}
+
+.contact-cross_1:after {
+  background: #000000;
+  content: "";
+  height: 10px;
+  left: -15px;
+  position: absolute;
+  top: 15px;
+  width: 40px;
+}
 
 /* ---------------------CONTACT--------------------------*/
 
@@ -263,3 +370,40 @@ hr {
 #email:focus {
   border: solid 2.2px red;
 }
+
+/* ---------------------FOOTER--------------------------*/
+.footer {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.footer_1 {
+  /* padding-top: 10px; */
+  display: flex;
+}
+
+.footer-box {
+  width: 1200px;
+  padding-left: 200px;
+}
+
+.foot {
+  flex-basis: 370px;
+}
+
+.footer_2 {
+  margin: 0%;
+
+  display: flex;
+}
+.footer_img {
+  margin: 0%;
+  padding: 13px;
+  width: 10%;
+  height: 10%;
+  display: flex;
+}
+#hyper {
+  text-decoration: none;
+  color: #000000;
