@@ -339,11 +339,13 @@ body {
   width: 104px;
   height: 30px;
   margin-right: 2px;
+  outline: none;
 }
 
 #submit-btn:hover {
   background-color: white;
   transition: background-color 0.5s;
+  outline: none;
 }
 
 .contact-right-side h5 {
