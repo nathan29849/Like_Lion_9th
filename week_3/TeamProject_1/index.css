@@ -45,7 +45,7 @@ body {
 
 .section {
   flex-basis: 600px;
-  background-image: url(section_img.webp);
+  background-image: url(img/section_img.webp);
   background-position: center center;
   background-repeat: no-repeat;
   color: white;
