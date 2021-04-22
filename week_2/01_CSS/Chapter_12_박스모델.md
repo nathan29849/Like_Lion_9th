@@ -29,6 +29,11 @@ HTML은 태그와 컨텐츠로 이루어져 있음
   <br/>
   <img src="https://images.velog.io/images/nathan29849/post/322df016-73be-4af9-a1fb-1e60df4f0b33/image.png" width="30%">
 
+`box-sizing` 속성을 사용해 이 방식을 바꿀 수 있습니다.
+
+`content-box`는 기본 CSS 박스 크기 결정법을 사용합니다. 요소의 너비를 100 픽셀로 설정하면 콘텐츠 영역이 100 픽셀 너비를 가지고, 테두리와 안쪽 여백은 이에 더해집니다.
+`border-box`는 테두리와 안쪽 여백의 크기도 <mark>요소의 크기로 고려합니다.</mark> 너비를 100 픽셀로 설정하고 테두리와 안쪽 여백을 추가하면, 콘텐츠 영역이 줄어들어 총 너비 100 픽셀을 유지합니다. 대부분의 경우 이 편이 크기를 조절할 때 쉽습니다.
+
 ### 2강. Content와 Border
 
 #### 2-1. Content
