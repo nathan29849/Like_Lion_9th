@@ -43,3 +43,15 @@ $ source [가상환경명]/bin/activate      // MacOS
 - 위의 노란색 부분과 같이 가상환경이 실행되면 알 수 있게끔 창에 뜬다.
 
 ### 2. Django를 이용한 웹 서버 구동
+
+#### 장고 설치 및 프로젝트 생성
+
+```
+$ pip install django    // Django 설치
+$ pip freeze            // pip로 설치된 것들의 목록을 보여줌 (with Version)
+```
+
+- pip란?
+  파이썬으로 작성된 패키지 소프트웨어를 설치 및 관리하는 패키지 관리 시스템이다.
+
+<img src="https://images.velog.io/images/nathan29849/post/83225fed-dbd5-4633-b140-22bf0926ebb4/image.png" width="700px;">
