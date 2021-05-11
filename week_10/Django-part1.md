@@ -70,6 +70,7 @@ $ django-admin startproject [프로젝트명]
 <img src="https://images.velog.io/images/nathan29849/post/a414a3dc-9386-44df-81ed-aa8d772bbd48/image.png" width="200px;">
 
 - 다음과 같이 프로젝트 폴더와 함께 하위 파일들이 생성됨을 알 수 있다.
+
   ⚠️ 장고 프로젝트를 생성하면 동일한 이름의 하위 폴더(myproject)가 하나 더 생김에 주의하자. ⚠️
 
 #### 웹 서버 구동하기
