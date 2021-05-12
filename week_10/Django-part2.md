@@ -11,13 +11,12 @@
   - `Model` : View에서 주고 받는 데이터 형식을 정의, DataBase(DB)
 
     the Model contains the logical file structure of the project and is the middleware & data handler between database and view.
-
     <br/>
 
   - `View` : 데이터를 처리하는 영역, MTV 중 핵심역할
 
     the View in this MTV architecture is formatting the data via the model.
-    In turn, it communivates to the database and that data which transfer to the template for viewing.
+    In turn, it communicates to the database and that data which transfer to the template for viewing.
     <br/>
 
   - `Template` : 사용자에게 보여지는 영역 (HTML, CSS, JS, 템플릿 언어 등이 이에 해당)
@@ -38,9 +37,11 @@
 ### 2. "Hello World" 띄워보기
 
 - 프로젝트, 그리고 앱(app)
+
   - 앱은 하나의 장고 프로젝트를 기능별로 나눈 것이며, 이를 통해 유지/보수가 용이해진다.
   - 쉽게 말해 앱이 모여 프로젝트가 된다.
   - Project가 App들을 총괄.
+
     <img src="https://images.velog.io/images/nathan29849/post/aaa1fea2-1207-49a6-9000-d3c81f042f2f/image.png" width="400px;">
 
 #### app 만들기
@@ -145,7 +146,7 @@ urlpatterns = [
 - 그 다음 `Ctrl` + `C`를 눌러 서버를 종료 시킨 후 아래의 코드를 터미널 창에 입력하여 가상환경도 종료한다.
 
 ```
-deactivate
+$ deactivate
 ```
 
 ---
