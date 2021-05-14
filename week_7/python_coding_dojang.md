@@ -26,13 +26,13 @@
 
 ## Unit 29. 함수 사용하기
 
-<img src="" width="50%;">
+<img src="https://images.velog.io/images/nathan29849/post/b730f639-3a17-4ffe-903e-4f215476077f/image.png" width="50%;">
 
 <br/>
 
 ## Unit 30. 함수에서 위치 인수와 키워드 인수 사용하기
 
-<img src="" width="50%;">
+<img src="https://images.velog.io/images/nathan29849/post/f34aea60-0a78-4f4b-a559-29bd85913949/image.png" width="50%;">
 
 <br/>
 
