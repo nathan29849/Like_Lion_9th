@@ -20,7 +20,7 @@
 
 ## Unit 26. 세트 사용하기
 
-<img src="" width="50%;">
+<img src="https://images.velog.io/images/nathan29849/post/f0366d04-d41e-4d72-b320-6bc17d7460d1/image.png" width="50%;">
 
 <br/>
 
