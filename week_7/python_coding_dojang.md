@@ -38,10 +38,10 @@
 
 ## Unit 31. 함수에서 재귀호출 사용하기
 
-<img src="" width="50%;">
+<img src="https://images.velog.io/images/nathan29849/post/0c133432-86f4-4561-a1d6-52bed5d5b5bd/image.png" width="50%;">
 
 <br/>
 
 ## Unit 33. 클로저 사용하기
 
-<img src="" width="50%;">
+<img src="https://images.velog.io/images/nathan29849/post/2c3c5772-49eb-448c-a58b-9b0fa34e6e96/image.png" width="50%;">
