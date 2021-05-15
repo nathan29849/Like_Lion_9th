@@ -8,7 +8,7 @@
 
 ## Unit 23. 2차원 리스트 사용하기
 
-<img src="" width="50%;">
+<img src="https://images.velog.io/images/nathan29849/post/2a6018b2-cd26-4803-ad3c-2c916b2b11f4/image.png" width="50%;">
 
 <br/>
 
