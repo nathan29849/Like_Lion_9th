@@ -8,7 +8,7 @@ MTV pattern Part 2.의 연장선에 있는 내용으로,
 - [settings.py](#) -> templates (HTML) -> [views.py](#) -> [urls.py](#)
 - 위의 작업 순서에 따라 url을 연결하는 작업을 진행하여 보자.
 
-### 1. input 값을 받을 수 있는 페이지 만들기 (index.html)
+### 😀 1. input 값을 받을 수 있는 페이지 만들기 (index.html)
 
 #### 🎈 (1) template (app/templates/index.html)
 
@@ -39,7 +39,7 @@ MTV pattern Part 2.의 연장선에 있는 내용으로,
 
 <img src="https://images.velog.io/images/nathan29849/post/4270d9d5-48fc-4b5d-a882-6ff8bb2e14dc/image.png" width="400px;">
 
-- 위왁 같이 페이지가 만들어진다.
+- 위와 같이 페이지가 만들어진다.
 
 #### 🎈 (2) views에 함수 만들기 (app/views.py)
 
@@ -63,7 +63,7 @@ urlpatterns = [
 ]
 ```
 
-### 2. input의 값을 넘겨줄 페이지 만들기 (hello.html)
+### 😀 2. input의 값을 넘겨줄 페이지 만들기 (hello.html)
 
 #### 🎈 (1) template (app/templates/hello.html)
 
@@ -109,7 +109,7 @@ urlpatterns = [
 
 #### 🎈 (4) templates 수정하기
 
-- (3)-1 index.html : form에서 action 속성 값 정해주기
+- (4)-1 index.html : form에서 action 속성 값 정해주기
   - url의 경로를 그대로 적어주어도 되지만, urls의 name 속성을 이용해도 된다!
 
 ```html
@@ -123,7 +123,7 @@ urlpatterns = [
 </form>
 ```
 
-- (3)-2 hello.html : 템플릿 언어를 사용하여 아까 view에서 딕셔너리 형태로 정해준 변수를 넣어준다.
+- (4)-2 hello.html : 템플릿 언어를 사용하여 아까 view에서 딕셔너리 형태로 정해준 변수를 넣어준다.
   - 템플릿 언어를 사용하는 방법 : 중괄호 두 번으로 묶어준다. `{{내용}}`
 
 ```html
