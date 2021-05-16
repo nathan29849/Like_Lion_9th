@@ -15,20 +15,16 @@
 
 ### < 주요 세션 일정 >
 
-##### 1주차 : [웹 기초 및 HTML(~ 폼 태그) ](week_1)
+##### 1. [웹 기초 및 HTML(~ 폼 태그) ](session_1)
 
-##### 2주차 : [CSS (+ Bootstrap & 과제 1)](week_2)
+##### 2. [CSS (+ Bootstrap & 과제 1)](session_2)
 
-##### 3주차 : [TeamProject 1 (web front clone)](week_3)
+##### 3. [TeamProject 1 (web front clone)](session_3)
 
-##### 4~6주차 : 중간고사 기간
+##### 4. [Python](session_4)
 
-##### 7주차 : [python](week_7)
+##### 5. [Django](session_5)
 
-##### 8주차 :
+##### 6.
 
-##### 9주차 :
-
-##### 10주차 :
-
-##### 11주차 :
+##### 7.
