@@ -109,7 +109,14 @@ urlpatterns = [
 ```python
 def count(request):
     entered_text = request.GET['fulltext']
-    return render(request, 'count.html', {'alltext' : entered_text})
+    word_list = entered_text.split()
+
+    for word in word_list:
+        if word in word_dictionary:
+            word_dictionary[word] += 1
+        else:
+            word_dictionary[word] = 1
+    return render(request, 'count.html', {'alltext' : entered_text, 'total': len(word_list), 'dictionary': word_dictionary.items()})
 ```
 
 -> `요청(request)이 들어오면 가져와라(GET). ['fulltext']를` 정도로 해석할 수 있다.
@@ -122,3 +129,53 @@ name 속성이 `'fulltext'`인 데이터를 entered_text라는 변수에 저장�
 
 - 위의 `'alltext'`에 해당하는 key는 template(count.html)에서 사용할 변수
 - 위의 `entered_text`에 해당하는 value는 views에서 선언한 변수
+- alltext라는 변수에 entered_text의 값을 담아 쓰겠다는 의미이다.
+
+### 사용되는 템플릿 언어
+
+```html
+<h1>당신이 입력한 텍스트는 {{total}} 단어로 구성되어 있습니다.</h1>
+<a href="{% url 'index' %}"> 다시하기 </a>
+
+<h1>입력한 텍스트: {{alltext}}</h1>
+<!-- 입력받은 전체 텍스트 -->
+
+<h1>단어 카운트:</h1>
+{% for word, frequency in dictionary %} {{word}} : {{frequency}}
+<br />
+{% endfor %}
+```
+
+- `{{ (변수) }}`같은 문법이 나왔다.
+  - 이것은, views에서 넘어온 데이터를 html 파일에서 보여주기 위한 기호이다.
+  - 우리는 views.py에서 'alltext'를 넘겨주기로 했었기 때문에, 그 문법에 맞게 alltext를 적어준 것입니다.
+  - {% %}와는 다른 문법입니다! (url을 사용할 때 쓰는 템플릿 언어)
+
+### html 내에서 for문 사용하여 views의 데이터 활용하기
+
+`count.html`에 다음의 내용을 추가하여 준다.
+
+```html
+<h1>단어 카운트:</h1>
+{% for word, frequency in dictionary %}
+<br />
+{{ word }}: {{ frequency}}
+<br />
+{% endfor %}
+```
+
+처음과 끝에 `{% for ~ in ~ %}`, `{% endfor %}`을 선언해 주어야 한다.
+(if 문도 마찬가지로 `{% if ~ %}`, `{% endif %}`로 선언한다.)
+
+### 📒 Part 4 내용정리
+
+우리는 지금까지 사용자가 입력한 텍스트를 그대로 보여주는 기능을 추가했다.
+우리가 구현한 **두 가지 핵심 기능**은 다음과 같다:
+
+1.  **총 단어 수를 세어주는 기능 구현**
+    - 입력받은 텍스트를 split()한 후, word_list에 담고 len함수를 이용하여 html에 넣었죠!
+2.  **각 단어 별로 나온 횟수를 세어주는 기능 구현**
+    - word_dictionary를 만들고, for문으로 모든 단어를 하나하나 돌리면서 word_dictionary에 추가해줬습니다.
+    - 돌려서 처음 나온 단어면 value값을 1로 하고, 아까 나온 word면 value값을 +1 해줍니다
+
+작업 순서는 다음과 같다.
