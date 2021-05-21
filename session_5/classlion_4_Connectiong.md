@@ -186,4 +186,11 @@ name 속성이 `'fulltext'`인 데이터를 entered_text라는 변수에 저장�
     - word_dictionary를 만들고, for문으로 모든 단어를 하나하나 돌리면서 word_dictionary에 추가해줬습니다.
     - 돌려서 처음 나온 단어면 value값을 1로 하고, 아까 나온 word면 value값을 +1 해줍니다
 
-작업 순서는 다음과 같다.
+---
+
+참고 : 장고 템플릿 언어 (URL 표현 방법)
+
+- `{% url "appname:urlname" %}`
+
+- `{{"urlname"}}`
+- `"urlname"`
