@@ -92,6 +92,8 @@ def count(request):
 - [urls.py](#)
 
 ```python
+from myapp import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
@@ -99,6 +101,12 @@ urlpatterns = [
     path('count/', views.count, name='count'),
 ]
 ```
+
+- 만약 여러개의 앱에서 views를 import 해 온다면 지금과 같은 방법으로는 불가능하다.
+
+  - 따라서 아래의 두 방법 중 하나를 택해 사용하면 된다.
+  - `import myapp.views`
+  - `from myapp import views as ma(쓰고싶은 이름)`
 
 - `index.html`의 form 태그의 action 속성의 속성 값에 `{% url 'count' %}`를 추가하여 준다.
 
