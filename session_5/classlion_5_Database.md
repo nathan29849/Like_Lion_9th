@@ -184,6 +184,19 @@ admin.site.register(Blog)
 -> blog 생성 완료 -> Server를 켠 후 127.~~/admin에 들어가기
 -> superuser login 하기 -> `ADD BLOG +` 버튼 클릭
 
+### ✋ 여기서 잠깐! ✋
+
+DateTimeField에서 시간을 설정해 줄 때, now를 클릭하더라도 지금 현재시간과 약 9시간 정도가 차이가 나는 모습을 볼 수 있다.
+
+<img src="https://images.velog.io/images/nathan29849/post/47460ff0-f93b-4e3f-a4bb-25a6d0e6e9fc/image.png" width="60%">
+
+이것을 현재시각과 맞춰주기 위해서는 project 폴더내의 settings.py에 들어가서
+다음과 같이 `TIME_ZONE`에 대한 내용을 `'UTC'`에서 `'Asia/Seoul'`바꿔주면 된다!
+
+```pseudo
+TIME_ZONE = 'Asia/Seoul'
+```
+
 #### admin page에서 추가한 내용의 제목을 바꾸는 방법
 
 admin 패널을 보게 되면 데이터를 저장할 때마다 `blog object(1)`이라고 되어있는 걸 볼 수 있다.
