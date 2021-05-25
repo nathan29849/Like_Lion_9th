@@ -149,4 +149,40 @@ urlpatterns = [
 ```python
 def detail(request, blog_id):
   blog = Blog.object.get(id = blog_id)
+# def detail(request, id):  헷갈리면 이렇게 해보자
+#   blog = Blog.object.get(id = id)
 ```
+
+- `views.py` 내의 다른 함수들과 다르게, 매개변수가 하나 더(blog_id) 들어가 있다.
+- get을 통해 blog_id 값을 갖는 객체를 하나 가져오라는 뜻이다.
+- 하지만 여기서는 이 방식이 아닌 조금 더 간편한 방식을 이용하려 한다.
+  - 우선 다음과 같이 코드를 수정한다.
+
+```python
+from django.shortcuts import render, get_object_or_404
+from .models import Blog
+
+def detail(request, id):
+  blog = get_object_or_404(Blog, pk = id)
+  return render(request, 'detail.html', {"blog": blog})
+```
+
+- 위와 같이 **django.shortcuts**에서 render와 함께 **get_object_or_404**를 import한다.
+
+✋ 여기서 잠깐 !✋
+**get_object_or_404**가 뭔가요??
+
+- 서버에 존재하지 않는 페이지에 대한 요청이 있을 경우 반환하는 상태코드가 `404`이다.
+- **get_object_or_404**를 통해 우리는 찾을 수 없는 `404` 코드를 처리해 줄 수 있게 된다.
+- 해당 함수는 두 개의 매개변수를 갖는다.
+  - 첫 번째 매개변수 : `models.py`에서 받아온 Blog
+  - 두 번째 매개변수 : **pk** (= primary key, 기본 키를 의미)
+
+✋ 여기서 잠깐 !✋
+**pk**가 뭔가요??
+
+- Primary Key의 약자. 기본키를 의미한다.
+  <img src="https://images.velog.io/images/nathan29849/post/d3d6e3f5-8a40-4d89-bdb5-f05122b80197/image.png" width="70%">
+
+- 데이터베이스에서 이 row 하나하나에 있는 데이터들을 식별하기 위한 id 값을 pk라고 한다.
+- id 값과 같다고 생각하면 된다!
