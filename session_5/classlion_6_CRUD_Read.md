@@ -19,12 +19,12 @@
 - R은 데이터를 웹페이지 상에서 읽을 수 있도록 한다.
 - 따라서, 읽을 수 있는 HTMl이 필요하다.
 
-### 1. HTML 만들기
+### 🍎 1. HTML 만들기
 
 - blog 앱 내에 templates/home.html 경로로 html 파일을 만든다.
 - 그리고 `views.py`, `urls.py`를 연결한다.
 
-#### views.py
+#### 😎 views.py
 
 - Blog 테이블의 모든 오브젝트를 가져와서 blogs에 저장한다.
 - 그 후 blogs라는 변수에 바로 윗줄에서 선언해준 blogs를 `key:value`의 형태로 저장한다.
@@ -40,7 +40,7 @@ def home(request):
 
 - 다 작성을 했다면 `urls.py`로 이동한다.
 
-#### urls.py
+#### 😎 urls.py
 
 ```python
 from django.contrib import admin
@@ -55,7 +55,7 @@ urlpatterns = [
 
 ---
 
-### 2. Template 작성하기 (home.html)
+### 🍎 2. Template 작성하기 (home.html)
 
 ```html
 <!DOCTYPE html>
@@ -75,7 +75,7 @@ urlpatterns = [
 - 그리고 나서 서버를 실행하면 아래와 같은 화면이 보이게 된다.
   <img src="https://images.velog.io/images/nathan29849/post/1d530427-bbb0-4900-9dce-689389073983/image.png" width="70%">
 
-#### QuerySet이 무엇일까?
+#### 😎 QuerySet이 무엇일까?
 
 - 쿼리셋은 **전달받은 모델의 객체 목록**을 뜻한다.
 - 객체들이 쿼리셋의 형태로 저장되어 있는 것이라고 생각하면 된다.
@@ -105,7 +105,7 @@ urlpatterns = [
 
 - 객체의 필드에 접근할 때는 `.`을 통해서 표현한다.
 
-#### summary 필드 🧐? 함수 🧐?
+#### 😎 summary 필드 🧐? 함수 🧐?
 
 - 바로 위의 html 코드를 보게되면 `{{blog.summary}}`라는 코드를 볼 수 있다.
 - 우리는 `models.py`에서 summary라는 필드를 만들어 준 적이 없다.
@@ -121,12 +121,12 @@ urlpatterns = [
 
 ---
 
-### 3. Detail 페이지 만들기
+### 🍎 3. Detail 페이지 만들기
 
 - 각 객체들을 하나씩만 보여지게하는 페이지를 만들고자 detail이라는 이름으로 html을 만드려고 한다.
 - 이 detail 페이지 구현에 앞서 **Path-converter**라는 개념을 알아보자
 
-#### Path-converter
+#### 😎 Path-converter
 
 - 페이지 하나를 만들기 위해서, `urls.py`에 path를 만들어야 하고, 함수를 만들어야 하고, html 페이지를 만들어야 했다.
 - 그런데 이 detail 페이지 같은 경우에는 DB 내 데이터 개수만큼 페이지가 하나씩 있어야 한다.
