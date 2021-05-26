@@ -142,7 +142,7 @@ urlpatterns = [
 > (2) urls.py
 > (3) home.html
 
-**(1) views.py**
+**(1) `views.py`**
 
 - 우선 `detail.html` 파일을 blog/templates 내에 생성한 뒤 `views.py`에 함수를 만들어준다.
 
@@ -169,6 +169,8 @@ def detail(request, id):
 
 - 위와 같이 **django.shortcuts**에서 render와 함께 **get_object_or_404**를 import한다.
 
+---
+
 ✋ 여기서 잠깐 !✋
 **get_object_or_404**가 뭔가요??
 
@@ -186,3 +188,87 @@ def detail(request, id):
 
 - 데이터베이스에서 이 row 하나하나에 있는 데이터들을 식별하기 위한 id 값을 pk라고 한다.
 - id 값과 같다고 생각하면 된다!
+
+---
+
+- pk 값은 위에서 받은 id로 지정을 해준다. 매개변수를 받은 id 값이 있는 블로그의 데이터를 가져오거나 일치되는 pk 값이 없다면, 404 에러를 띄운다는 뜻을 가진다.
+
+- 이제 render를 해줘야하는데, 요청에 대해 `detail.html`을 렌더링 해주고, 데이터를 `{"blog" : blog}`형태로 딕셔너리에 담아서 보내줍니다.
+
+- 여기서 id 값은 `urls.py`에서 온다.
+
+**(2) `urls.py`**
+
+```python
+from django.contrib import admin
+from django.urls import path
+from blog.views import *
+
+urlpatterns =[
+  path('admin/', admin.site.urls),
+  path('', home, name="home"),
+  path('<str:id>', detail, name="detail"),
+]
+```
+
+- 이번 `urls.py`의 경우 path를 정하는 방식이 조금 다르다.
+- 기본적으로 `<str:>`의 형태로 나타난다.
+
+  - 여기서 str은 문자열의 형태를 의미
+  - id는 앞서 보았던 `views.py` 내의 detail 함수에서 정한 매개변수의 이름(id)이다.
+
+- 이렇게 하면 DB의 id 값에 따라 페이지가 다르게 보여질 수 있고, 이 값이 `views.py`에 매개변수로 들어갈 수도 있게 한다.
+
+- 이 `urls.py`에서 쓰이는 id는 `home.html`의 a태그에서 온다.
+
+**(3) `home.html`**
+
+```html
+<body>
+  <h1>Blog Project</h1>
+  <div class="container">
+    {% for blog in blogs%}
+    <div>
+      <h3>{{ blog.title }}</h3>
+      {{ blog.id }} <br />
+      {{ blog.writer }} <br />
+      {{ blog.summary }}
+      <a href="{% url 'detail' blog.id %}">...more</a>
+    </div>
+    {%endfor %}
+  </div>
+</body>
+```
+
+- 현재, blogs 안에 있는 blog 객체들 하나하나가 Object이고, 이를 통해 column에 접근할 수 있는데, 각 객체들 별로 서로 다른 id 값을 갖고 있다.
+
+  - 이는 `{{blog.id}}`로 확인해 볼 수 있다.
+
+- 여기서 a태그를 보면 detail이라는 이름의 url로 요청을 보내는데, `blog.id`도 같이 보내게 되는 것이다.
+  <br>
+  <br>
+
+- 이제 본격적으로 `detail.html`을 만들어 보자.
+
+```html
+<body>
+  <h1>{{blog.title}}</h1>
+  <div>
+    작성자: {{blog.writer}}
+    <br />
+    날짜: {{blog.pub_date}}
+  </div>
+  <hr />
+  <p>{{blog.body}}</p>
+</body>
+```
+
+- 여기서 어떻게 장고 템플릿 언어를 통해 Blog를 가져왔는지를 살펴보자.
+
+- 우선 `views.py`의 detail 함수를 살펴보자.
+
+```python
+blog = get_object_or_404(Blog, pk = id)
+```
+
+- 여기서 Blog는 `models.py`에 있는 Blog를 가져온 것이므로, 이제 `detail.html`에서도 사용가능하게 된 것이다.
