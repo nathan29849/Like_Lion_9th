@@ -11,8 +11,8 @@
 
 오늘 배울 함수
 
-- new: new.html을 보여줌
-- create: new.html에서 받은 정보를 데이터베이스에 저장
+> - new: new.html을 보여줌
+> - create: new.html에서 받은 정보를 데이터베이스에 저장
 
 ## 💎 new 함수 만들기
 
@@ -156,7 +156,7 @@ def create(request):
     return redirect('detail', new_blog.id)
 ```
 
-### urls.py에서 path 정해주기
+### 2. urls.py에서 path 정해주기
 
 - `new.html` 내 form 태그의 action 속성에 들어갈 url을 만들어준다.
 
@@ -174,7 +174,7 @@ urlpatterns = [
 ]
 ```
 
-### form의 action 값 넣어주기
+### 3. form의 action 값 넣어주기
 
 ```html
 <form action="{% url 'create' %}" method="post">
@@ -186,7 +186,7 @@ urlpatterns = [
 </form>
 ```
 
-### 직접 데이터 넣어보기
+### 4. 직접 데이터 넣어보기
 
 - (1)
   <img src="https://images.velog.io/images/nathan29849/post/6254e107-e741-421c-bc03-88da533efd5c/image.png" width="50%">
