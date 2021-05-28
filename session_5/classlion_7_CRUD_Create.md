@@ -158,6 +158,8 @@ def create(request):
 
 ### urls.py에서 path 정해주기
 
+- `new.html` 내 form 태그의 action 속성에 들어갈 url을 만들어준다.
+
 ```python
 from django.contrib import admin
 from django.urls import path
@@ -186,7 +188,20 @@ urlpatterns = [
 
 ### 직접 데이터 넣어보기
 
-#### ✋ 여기서 잠깐 ✋
+- (1)
+  <img src="https://images.velog.io/images/nathan29849/post/6254e107-e741-421c-bc03-88da533efd5c/image.png" width="50%">
 
-터미널 창에서도 GET, POST 방식이 확인 가능하다!
-이미지 첨부
+<hr/>
+
+- (2)
+  <img src="https://images.velog.io/images/nathan29849/post/a9d38777-ae63-48ff-9751-24366665ad92/image.png" width="50%">
+
+<hr/>
+
+- (3)
+  <img src="https://images.velog.io/images/nathan29849/post/f081fe25-455d-4197-b72c-9467e847074f/image.png" width="50%">
+
+#### ✋ 확인해보기 ✋
+
+- 터미널 창에서도 GET, POST 방식이 확인 가능하다!
+  <img src="https://images.velog.io/images/nathan29849/post/87268c7b-3c71-49ae-a249-72b03a92a7c3/image.png" width="70%">
