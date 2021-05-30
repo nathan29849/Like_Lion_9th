@@ -112,27 +112,6 @@ urlpatterns = [
   - **render** : 새로운 html을 만들었을 때 그 곳에 보내려고 할 때 쓰인다.
   - **redirect** : 블로그 객체를 생성, 저장 후 **원래 있던** 페이지로 돌아가려고 할 때 쓴다.
 
-```python
-from django.shortcuts import render, get_object_or_404, redirect
-from django.utils import timezone
-from .models import Blog
-
-def create(request):
-    new_blog = Blog()   # object 생성
-    new_blog.title = request.POST['title']          # 필드 값 할당
-    new_blog.person = request.POST['writer']        # 필드 값 할당
-    new_blog.body = request.POST['body']            # 필드 값 할당
-    # pub_date는 장고에서 제공하는 모듈을 쓸 것임.
-    new_blog.pub_date = timezone.now()
-    new_blog.save()
-
-    # 어떤 화면으로 이동할 것인지 return 정해주기
-    # 새로운 html을 만들어서 거기에 보내려고 하는게 아니기 때문에 render는 안쓴다.
-    # 블로그 객체를 생성, 저장 후 원래있던 페이지로 돌아가려고 함.
-    # 그러기 위해서는 redirect를 쓴다.
-    return redirect('detail', new_blog.id)
-```
-
 #### form 태그의 action 부분을 채우기위해서는 views에 관련 함수가 필요함
 
 ```python
