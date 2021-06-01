@@ -147,14 +147,14 @@ urlpatterns = [
 - 우선 `detail.html` 파일을 blog/templates 내에 생성한 뒤 `views.py`에 함수를 만들어준다.
 
 ```python
-def detail(request, blog_id):
-  blog = Blog.object.get(id = blog_id)
+def detail(request, id):
+  blog = Blog.object.get(id = id)
 # def detail(request, id):  헷갈리면 이렇게 해보자
 #   blog = Blog.object.get(id = id)
 ```
 
-- `views.py` 내의 다른 함수들과 다르게, 매개변수가 하나 더(blog_id) 들어가 있다.
-- get을 통해 blog_id 값을 갖는 객체를 하나 가져오라는 뜻이다.
+- `views.py` 내의 다른 함수들과 다르게, 매개변수가 하나 더(id) 들어가 있다.
+- get을 통해 id 값을 갖는 객체를 하나 가져오라는 뜻이다.
 - 하지만 여기서는 이 방식이 아닌 조금 더 간편한 방식을 이용하려 한다.
   - 우선 다음과 같이 코드를 수정한다.
 
