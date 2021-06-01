@@ -142,7 +142,7 @@ def update(request, id): # 수정을 해야할 id 값을 받아야 한다. (Crea
 ```python
 def update(request, id):
 		blog = Blog.objects.get(id = id)
-		if request.method == "POST":
+		if request.method == "POST":  # string으로 POST, GET이 가져와진다.
 				blog.title = request.POST["title"]
         blog.writer = request.POST["writer"]
 				blog.body = request.POST["body"]
