@@ -113,6 +113,9 @@ urlpatterns = [
   - `from django.shortcuts import redirect`를 통해 사용가능하다.
   - **render** : 새로운 html을 만들었을 때 그 곳에 보내려고 할 때 쓰인다.
   - **redirect** : 블로그 객체를 생성, 저장 후 **원래 있던** 페이지로 돌아가려고 할 때 쓴다.
+  - request.POST, reqeust.GET
+    - `request.POST` : 요청이 들어오면~ 보내줘라(POST)
+    - `reqeust.GET` : 요청이 들어오면~ 가져와라(GET)
 
 #### form 태그의 action 부분을 채우기위해서는 views에 관련 함수가 필요함
 
