@@ -1,4 +1,4 @@
-# CRUD 중 Create
+# CRUD 중 Update
 
 - **CRUD**
 
