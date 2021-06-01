@@ -135,6 +135,22 @@ def update(request, id): # 수정을 해야할 id 값을 받아야 한다. (Crea
 - 그래야 url에서 지정해주었던 곳에 id값이 들어갈 수 있다.
   - ex. path('update/\<str:id\>', update, name="update"),
 
+✋ 여기서 잠깐 !✋
+
+- edit 함수와 update 함수를 한 함수 내에 묶어줄수도 있다.
+
+```python
+def update(request, id):
+		blog = Blog.objects.get(id = id)
+		if request.method == "POST":
+				blog.title = request.POST["title"]
+        blog.writer = request.POST["writer"]
+				blog.body = request.POST["body"]
+				blog.save()
+				return redirect('detail', blog.id)
+		return render(reqeust, "update.html", {"blog" : blog})
+```
+
 ### 🎯 urls.py
 
 ```python
