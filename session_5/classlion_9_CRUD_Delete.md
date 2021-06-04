@@ -27,7 +27,7 @@ def delete(request, id):
 - delte 함수의 매개변수에 있는 id를 받으려면 무조건 path converter를 해주어야 한다.
 
 ```python
-path('delete/<str:id>', m.delete, name="delete"),
+path('delete/<int:id>', m.delete, name="delete"),
 ```
 
 # 3. detail.html
@@ -36,4 +36,14 @@ path('delete/<str:id>', m.delete, name="delete"),
 
 ```html
 <a href="{% url 'delete' blog.id %}">삭제하기</a>
+```
+
+- 다른 방법으로 delete 구현 (보통은 a 태그로 구현하기 보다는 아래의 방식을 더 많이 사용한다고 한다.)
+
+```html
+<form action="{% url 'delete' blog.id %}" method="post">
+  {%csrf_token%}
+  <input type="button" name="id" value="${title}" />
+  <input type="submit" value="delete" />
+</form>
 ```

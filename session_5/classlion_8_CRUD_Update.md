@@ -168,6 +168,6 @@ path('update/<str:id>', update, name="update"),
 ## 추가 내용
 
 - path-converter를 사용할 때 이전의 정리에서는 `<str:id>`를 사용하곤 하였는데,
-  패턴과의 매치 문제로 인해 보통은 `<int:id>`로 사용한다고 하니 참고하도록 하자.
+  url 패턴과의 매치 문제로 인해 보통은 `<int:id>`로 사용한다고 하니 참고하도록 하자.
 
 - `<int:id>` specifies two things: A path converter `(int)` and the variable name `(id)` that you want to capture. In this case, only URLs where this part is integer will match the pattern. id will always be an integer.
