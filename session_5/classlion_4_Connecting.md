@@ -118,6 +118,7 @@ urlpatterns = [
 def count(request):
     entered_text = request.GET['fulltext']
     word_list = entered_text.split()
+    word_dictionary = {}
 
     for word in word_list:
         if word in word_dictionary:
